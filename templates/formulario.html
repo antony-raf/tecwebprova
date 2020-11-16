@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro | Novo time</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
+</head>
+<body style="background-color:#f1f1f1;">
+    <div class="container">
+        <div class="menu">
+            <ul>
+                <li class="logo"><a href="index"><img src="/static/rotula.png"></li></a>
+                <li><a href="equipes" class="equipes">Equipes</a></li>
+                <li><a href="formulario"class="formulario">Formulario Nova Equipe</li></a>
+                <li><a href = "novaspartidas" class = "novaspartidas">Formulario nova partida</li></a>
+                <li><a href = "listarequipes" class = "listarequipes">Lista de novas equipes</li></a>
+            </ul>
+        </div>
+        <hr class="linhah">
+    </div>
+    <div class ="formstyle">
+        <form action="cadastrar" autocomplete="off" method="POST"> 
+                <h1>Confirme os dados</h1>
+                <label for="exampleInputEmail1"></label>
+                <input type="text" class="form-control" name="nome" placeholder="Digite um nome para sua equipe">
+                <label for="exampleInputPassword1"></label>
+                <input type="text" class="form-control" name="localEquipe" placeholder="Digite o local que sua equipe reside">
+                <label for="exampleInputPassword1"></label>
+                <input type="text" class="form-control" name="corequipe1" placeholder="Digite a cor prímaria do seu uniforme">
+                <label for="exampleInputPassword1"></label>
+                <input type="text" class="form-control" name="corequipe2" placeholder="Digite a cor secundaria do seu uniforme">
+                <input class="salvar" type="submit" value="Salvar"></button>
+          </form>
+    </div>
+    <div>
+        <div class="rotulos">
+            <div class="fotorotula"><img src="/static/rotula.png"></div>
+        </div>
+    </div>
+<hr class="linhafinal">
+</body>
+</html>

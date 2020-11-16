@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBA | National Basketball League</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+</head>
+<body style="background-color:#f1f1f1;">
+    <link href=>
+    <div class="container">
+        <div class="menu">
+            <ul>
+                <li class="logo"><a href="index"><img src="/static/rotula.png"></li></a>
+                <li><a href="equipes" class="equipes">Equipes</a></li>
+                <li><a href="formulario"class="formulario">Formulario Nova Equipe</li></a>
+                <li><a href = "novaspartidas" class = "novaspartidas">Formulario nova partida</li></a>
+                <li><a href = "listarequipes" class = "listarequipes">Lista de novas equipes</li></a>
+            </ul>
+        </div>
+        <hr class="linhah">
+    </div>
+    <div class="tabelageral">
+        <table class="tabela1">
+            <thead>
+                <tr>
+                    <th>ID</td>
+                    <th>Nome</td>
+                    <th>Região</th>
+                    <th>Cor Primária</td>
+                    <th>Cor Secundária</td>
+                </tr>
+            </thead>
+            <tbody>
+                {% for times in times %}
+                <tr>
+                    <td>{{ times._id }}</td>
+                    <td>{{ times.nome }} </td>
+                    <td>{{ times.localEquipe }} </td>
+                    <td>{{ times.corequipe1 }}</td>
+                    <td>{{ times.corequipe2 }}</td>
+                {% endfor %}
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <div class="rotulos">
+            <div class="fotorotula"><img src="/static/rotula.png"></div>
+        </div>
+    </div>
+    <hr class="linhafinal">
+</body>
+</html>
